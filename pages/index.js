@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Property from '../components/Property.jsx';
 import { Flex, Box, Text, Button } from '@chakra-ui/react';
 
 import { baseUrl, fetchApi } from '../utils/fetchApi';
@@ -12,7 +13,7 @@ const Banner = ({ purpose, title1, title2, desc1, desc2, linkName, buttonText, i
       <Text color="gray.500" fontSize="sm" fontWeight="medium">{purpose}</Text>
       <Text fontSize="3xl" fontWeight="bold">{title1}<br />{title2}</Text>
       <Text color="gray.700" fontSize="lg" paddingTop="3" paddingBottom="3">{desc1}<br />{desc2}</Text>
-      <Button fontSize="xl" bg="blue.300" color="teal">
+      <Button fontSize="xl" bg="black" color="teal.300">
         <Link href={linkName}>{buttonText}</Link>
       </Button>
     </Box>
@@ -20,7 +21,6 @@ const Banner = ({ purpose, title1, title2, desc1, desc2, linkName, buttonText, i
 )
 
 export default function Home({ propertiesForSale, propertiesForRent }) {
-  console.log(propertiesForSale, propertiesForRent);
 
   return (
     <Box>
@@ -51,20 +51,21 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
       {/* Fetch the properties and map over them */}
       <Flex flexWrap="wrap">
         {propertiesForSale.map((property) => <Property property={property} key={property.id} />)}
-        <Flex>
-        </Box>
-        )
+      </Flex>
+    </Box>
+  )
 }
 
-        // Fetching Data From API's Next.js Style
-        export async function getStaticProps() {
+// Fetching Data From API's Next.js Style
+export async function getStaticProps() {
   const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`)
-        const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`)
+  const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`)
 
-        return {
-          props: {
-          propertiesForSale: propertyForSale?.hits,
-        propertiesForRent: propertyForRent?.hits,
+  return {
+    props: {
+      propertiesForSale: propertyForSale?.hits,
+      propertiesForRent: propertyForRent?.hits,
     }
   }
 }
+
