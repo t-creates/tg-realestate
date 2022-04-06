@@ -49,20 +49,22 @@ export default function Home({ propertiesForSale, propertiesForRent }) {
         imageUrl='https://bayut-production.s3.eu-central-1.amazonaws.com/image/110993385/6a070e8e1bae4f7d8c1429bc303d2008'
       />
       {/* Fetch the properties and map over them */}
-      {propertiesForSale.map((property) => <Property property={property} key={property.id} />)}
-    </Box>
-  )
+      <Flex flexWrap="wrap">
+        {propertiesForSale.map((property) => <Property property={property} key={property.id} />)}
+        <Flex>
+        </Box>
+        )
 }
 
-// Fetching Data From API's Next.js Style
-export async function getStaticProps() {
+        // Fetching Data From API's Next.js Style
+        export async function getStaticProps() {
   const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`)
-  const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`)
+        const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`)
 
-  return {
-    props: {
-      propertiesForSale: propertyForSale?.hits,
-      propertiesForRent: propertyForRent?.hits,
+        return {
+          props: {
+          propertiesForSale: propertyForSale?.hits,
+        propertiesForRent: propertyForRent?.hits,
     }
   }
 }
