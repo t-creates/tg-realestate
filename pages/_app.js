@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <Navbar />
+        
       </Head>
       <ChakraProvider>
         <Layout>
