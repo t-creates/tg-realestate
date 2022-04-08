@@ -11,7 +11,7 @@ import DefaultImage from '../assets/images/house.jpg';
 const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, baths, area, agency, isVerified, externalID } }) => (
   <Link href={`/property/${externalID}`} passHref>
     <Flex flexWrap="wrap" w='420px' p='5' paddingTop='0' justifyContent='flex-start' cursor='pointer' >
-      <Box className="grow shadow-5 br4" >
+      <Box className="grow shadow-5 br4" bg='teal.400' >
         <Image src={coverPhoto ? coverPhoto.url : DefaultImage} width={400} height={260} alt='house' className="br4" />
       </Box>
       <Box w='full'>
@@ -24,11 +24,11 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
             <Avatar size='md' src={agency?.logo?.url} />
           </Box>
         </Flex>
-        <Flex alignItems="center" p="1" justifyContent='space-between' width='250px' color='blue.400'>
+        <Flex alignItems="center" p="1" justifyContent='space-between' width='250px' color='teal.400'>
           {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
         </Flex>
         <Text fontSize='lg'>
-          {title.length > 30 ? `${title.substring(0, 30)}...` : title}
+          {title.length > 35 ? `${title.substring(0, 35)}...` : title}
         </Text>
       </Box>
     </Flex>
