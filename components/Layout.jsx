@@ -7,7 +7,7 @@ import Footer from './Footer';
 const Layout = ({ children }) => (
   <>
     <Head>
-      <title>Homeless? We got shelters!</title>
+      <title>Proper Properties</title>
     </Head>
     <Box maxWidth='1280px' m='auto'>
       <header>
