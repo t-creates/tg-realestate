@@ -2,28 +2,15 @@
 
 ### Proper Properties Application
 
-Real Estate is a web-based application that allows users to rent or buy properties from a variety of locations around the world. Users can search for cars based on their desired location and rental dates, view available options, and book their rental directly through the application.
-
-Proper Properties features a user-friendly interface and secure payment processing, making it easy and convenient for users to rent cars on the go. The application also includes a variety of filters and sorting options, allowing users to find the perfect car for their needs.
-
-### Application in Action
-
-Visit the application live demo.
-
-<Video/GIF/Screenshot of the application>
+Real Estate is a web-based application that allows users to rent or buy properties from a variety of locations around the world. Users can search for properties based on their desired location and rental dates, view available options, and book their rental directly through the application.
 
 ### Built With
 
 Proper Properties is built with modern web technologies, including Next.js for server-rendered React, Tailwind for custom CSS, and Redux Toolkit for managing application state. It also integrates with external platforms like Stripe for payment processing, Cloudinary for image management, and MongoDB for data storage. Finally, NextAuth is used to handle user authentication and authorization:
 
 - **Next.js** is a framework for building server-rendered React applications. It allows developers to build web applications that are optimized for performance and SEO, with automatic code splitting and optimized server-side rendering.
-- **TypeScript** is a typed superset of JavaScript that allows developers to add type annotations to their code, providing additional type checking and improved code readability. TypeScript can be used with a variety of different JavaScript libraries and frameworks.
-- **Tailwind** is a utility-first CSS framework that allows developers to quickly build custom designs by composing pre-defined CSS classes. It provides a wide range of low-level styles that can be combined in various ways to create complex layouts and designs.
-- **Redux Toolkit** is a set of tools for simplifying the process of writing Redux logic in a React application. It includes utilities for creating and managing Redux stores, as well as middleware for handling async actions.
-- **Stripe** is a platform for building and managing online payment systems. It provides APIs for integrating with a variety of payment methods, including credit cards, bank transfers, and digital wallets.
-- **Cloudinary** is a cloud-based platform for managing and delivering images and videos. It provides APIs for storing, manipulating, and serving media assets, and optimizing delivery.
+- **Chakra UI** is a utility-first CSS framework that allows developers to quickly build custom designs by composing pre-defined CSS classes. It provides a wide range of low-level styles that can be combined in various ways to create complex layouts and designs.
 - **Express** is a web application framework for Node.js that provides a simple and flexible way to build web applications and APIs. It includes a range of features for routing, middleware, and error handling.
-- **MongoDB** is a cross-platform document-oriented database that stores data in JSON-like documents. It is designed for flexibility and scalability, making it a popular choice for modern web applications.
 - **NextAuth** is a library for adding authentication to Next.js applications. It provides a simple and flexible way to implement user login, registration, and authorization in a Next.js app.
 
 ### **Getting Started**
@@ -61,14 +48,14 @@ Make sure you have all the necessary prerequisites installed on your system. Fol
 - Run the following command to clone the project from GitHub:
     
     ```bash
-    git clone https://github.com/JavaScript-Mastery-PRO/Web3_CarRent.git
+    git clone https://github.com/t-creates/tg-realestate.git
     ```
     
-- This will create a new directory called "Web3_CarRent" in the current location, containing the code for the Car Rent project.
+- This will create a new directory called "tg-realestate" in the current location, containing the code for the Proper Properties project.
 - Navigate to the project directory by running the following command:
     
     ```bash
-    cd Web3_CarRent
+    cd tg-realestate
     ```
     
 - Run the following command to install the project's dependencies using npm:
@@ -103,10 +90,9 @@ This will start the development server and open the Proper Properties applicatio
 
 ### Features
 
-- Vehicle Search: Search for a properties to rent or buy based on various criteria, such as location, availability, and type of property.
-- Payment processing: Securely enters and processes payment information.
-- Vehicle availability: Display the availability of properties in real-time, so users can quickly determine which options are currently available for rent.
-- Vehicle details: View detailed information about the properties available for rent or buy, including make and rooms, features, and pricing.
+- Property Search: Search for a properties to rent or buy based on various criteria, such as location, availability, and type of property.
+- Property availability: Display the availability of properties in real-time, so users can quickly determine which options are currently available for rent.
+- Property details: View detailed information about the properties available for rent or buy, including make and rooms, features, and pricing.
 - Account management: Create and manage their own profiles within the app, including the ability to save payment information and rental preferences.
 
 ### Contributing
