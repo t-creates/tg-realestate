@@ -4,8 +4,6 @@
 
 Real Estate is a web-based application that allows users to rent or buy properties from a variety of locations around the world. Users can search for properties based on their desired location and rental dates, view available options, and book their rental directly through the application.
 
-<img width="1431" alt="Screenshot 2023-02-05 at 4 01 02 PM" src="https://user-images.githubusercontent.com/76760849/218866103-40bfb72c-e7c2-45b1-bced-c085d8ca9ccb.png">
-
 ### Built With
 
 Proper Properties is built with modern web technologies, including Next.js for server-rendered React, Tailwind for custom CSS, and Redux Toolkit for managing application state. It also integrates with external platforms like Stripe for payment processing, Cloudinary for image management, and MongoDB for data storage. Finally, NextAuth is used to handle user authentication and authorization:
